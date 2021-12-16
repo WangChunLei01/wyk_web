@@ -3,10 +3,21 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-    routes: [{
+    routes: [
+        {
             path: '/home',
-            name: "Home",
+            name: "LogIn",
             component: () => import('@/views'),
+        },
+        {
+            path: '/login',
+            name: "LogIn",
+            component: () => import('@/views/log-in'),
+        },
+        {
+            path: '/tiny',
+            name: "RichText",
+            component: () => import('@/views/rich-text'),
         },
         // 重定向
         {
