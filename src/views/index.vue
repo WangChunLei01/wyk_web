@@ -12,7 +12,7 @@
     >
       <el-menu-item index="1" disabled>处理中心</el-menu-item>
       <el-submenu index="2">
-        <template slot="title">我的工作台</template>
+        <template slot="title">工作台</template>
         <el-menu-item index="/tiny">富文本</el-menu-item>
         <el-menu-item index="2-2">待开发</el-menu-item>
         <el-menu-item index="2-3">待开发</el-menu-item>
@@ -23,14 +23,25 @@
           <el-menu-item index="2-4-3">待开发</el-menu-item>
         </el-submenu>
       </el-submenu>
-      <el-menu-item style="float: right;" index="/login" >登录</el-menu-item>
-      <el-menu-item style="float: right;" index="4" disabled>消息中心</el-menu-item>
+      <el-menu-item style="float: right" index="/login">登录</el-menu-item>
+      <el-menu-item style="float: right" index="4" disabled
+        >消息中心</el-menu-item
+      >
     </el-menu>
-    <img src="../assets/logo.png" alt="" />
+    <img
+      class="animate__animated animate__rubberBand"
+      src="../assets/logo.png"
+      alt=""
+    /><br />
+    <div class="neon-btn">
+      <button class="btn bc-hove">流星雨</button>
+    </div>
   </div>
 </template>
   
 <script>
+import "animate.css";
+
 export default {
   name: "app",
   data() {
@@ -46,6 +57,31 @@ export default {
 };
 </script>
   
-  <style lang="less" scoped>
+<style scoped>
+.neon-btn{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #031628;
+}
+.btn {
+  font-size: 14px;
+  font-weight: 300;
+  border: 1px solid;
+  padding: 10ox 20px;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+.bc-hove {
+  color: aqua;
+}
+.bc-hove:hover {
+  background-color: aqua;
+  box-shadow: 10px 10px 99px 10px rgba(76, 201, 240, 1);
+}
 </style>
+
+
   
