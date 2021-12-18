@@ -19,6 +19,11 @@ const router = new VueRouter({
             name: "RichText",
             component: () => import('@/views/rich-text'),
         },
+        {
+            path:'/meteror',
+            name: "meteorShower",
+            component:()=> import('@/views/meteror-shower'),
+        },
         // 重定向
         {
             path: '/',

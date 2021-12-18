@@ -1,40 +1,14 @@
 <template>
   <div>
-    <el-menu
-      :default-active="activeIndex"
-      class="el-menu-demo"
-      mode="horizontal"
-      @select="handleSelect"
-      background-color="#065870"
-      text-color="#fff"
-      router
-      active-text-color="#ffd04b"
-    >
-      <el-menu-item index="1" disabled>处理中心</el-menu-item>
-      <el-submenu index="2">
-        <template slot="title">工作台</template>
-        <el-menu-item index="/tiny">富文本</el-menu-item>
-        <el-menu-item index="2-2">待开发</el-menu-item>
-        <el-menu-item index="2-3">待开发</el-menu-item>
-        <el-submenu index="2-4">
-          <template slot="title">待开发</template>
-          <el-menu-item index="2-4-1">待开发</el-menu-item>
-          <el-menu-item index="2-4-2">待开发</el-menu-item>
-          <el-menu-item index="2-4-3">待开发</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-      <el-menu-item style="float: right" index="/login">登录</el-menu-item>
-      <el-menu-item style="float: right" index="4" disabled
-        >消息中心</el-menu-item
-      >
-    </el-menu>
     <img
       class="animate__animated animate__rubberBand"
       src="../assets/logo.png"
       alt=""
     /><br />
-    <div class="neon-btn">
-      <button class="btn bc-hove">流星雨</button>
+    <div class="neon-link">
+      <router-link :underline="false" :to="{name:'meteorShower'}" class="btn bc-meteor">Bright Meteor</router-link>
+      <el-link :underline="false" class="btn bc-time">Time Flies</el-link>
+      <el-link :underline="false" class="btn bc-Fireworks">Colorful Fireworks</el-link>
     </div>
   </div>
 </template>
@@ -45,9 +19,7 @@ import "animate.css";
 export default {
   name: "app",
   data() {
-    return {
-      activeIndex: "1",
-    };
+    return {};
   },
   methods: {
     handleSelect(key, keyPath) {
@@ -58,7 +30,7 @@ export default {
 </script>
   
 <style scoped>
-.neon-btn{
+.neon-link {
   width: 100%;
   height: 400px;
   display: flex;
@@ -67,19 +39,36 @@ export default {
   background: #031628;
 }
 .btn {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 300;
-  border: 1px solid;
   padding: 10ox 20px;
   text-transform: uppercase;
   background-color: transparent;
 }
-.bc-hove {
+.bc-meteor {
   color: aqua;
+  text-decoration:none
 }
-.bc-hove:hover {
-  background-color: aqua;
+.bc-time {
+  color: rgb(52, 171, 207);
+}
+.bc-Fireworks {
+  color: dodgerblue;
+}
+.bc-meteor:hover {
+  color: white;
+  background-color: rgba(76, 201, 240, 0.5);
   box-shadow: 10px 10px 99px 10px rgba(76, 201, 240, 1);
+}
+.bc-time:hover {
+  color: white;
+  background-color: rgba(37, 160, 187, 0.685);
+  box-shadow: 10px 10px 99px 10px rgba(52, 210, 247, 1);
+}
+.bc-Fireworks:hover {
+  color: white;
+  background-color: rgba(38, 61, 250, 0.5);
+  box-shadow: 10px 10px 99px 10px rgba(38, 61, 250, 1);
 }
 </style>
 
