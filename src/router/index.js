@@ -24,6 +24,11 @@ const router = new VueRouter({
             name: "meteorShower",
             component:()=> import('@/views/meteror-shower'),
         },
+        {
+            path:'/visualization',
+            name: "visualization",
+            component:()=> import('@/views/visualization'),
+        },
         // 重定向
         {
             path: '/',
