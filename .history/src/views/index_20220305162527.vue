@@ -1,6 +1,10 @@
 <template>
   <div>
-    <echarts></echarts>
+    <img
+      class="animate__animated animate__rubberBand"
+      src="../assets/logo.png"
+      alt=""
+    /><br />
     <div class="neon-link">
       <router-link :underline="false" :to="{name:'meteorShower'}" class="btn bc-meteor">Bright Meteor</router-link>
       <el-link :underline="false" class="btn bc-time">Time Flies</el-link>
@@ -8,16 +12,12 @@
     </div>
   </div>
 </template>
-
+  
 <script>
-import echarts from "@/components/echarts"
-
 import "animate.css";
 
 export default {
-
   name: "app",
-  components: {echarts},
   data() {
     return {};
   },
@@ -28,7 +28,7 @@ export default {
   },
 };
 </script>
-
+  
 <style scoped>
 .neon-link {
   width: 100%;
@@ -73,4 +73,4 @@ export default {
 </style>
 
 
-
+  

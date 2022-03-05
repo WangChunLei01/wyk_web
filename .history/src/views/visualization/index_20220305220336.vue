@@ -58,7 +58,7 @@ export default {
         yAxis: {},
         series: [
           {
-            name: '沙雕',
+            name: '销量',
             type: 'bar',
             data: [5,
             {

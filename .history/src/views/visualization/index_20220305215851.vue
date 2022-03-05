@@ -49,25 +49,18 @@ export default {
       // 绘制图表
       myChart.setOption({
         title: {
-          text: '阿修指数'
+          text: '柱状图 示例'
         },
         tooltip: {},
         xAxis: {
-          data: ['才智', '沙雕', '智商', '财富', '运气', '小（**）']
+          data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
         },
         yAxis: {},
         series: [
           {
-            name: '沙雕',
+            name: '销量',
             type: 'bar',
-            data: [5,
-            {
-              value: 50,
-              itemStyle: {
-                color: '#a90000'
-              }
-            },
-            6, 10, 10, 20]
+            data: [5, 20, 36, 10, 10, 20]
           }
         ]
       });

@@ -58,14 +58,11 @@ export default {
         yAxis: {},
         series: [
           {
-            name: '沙雕',
+            name: '销量',
             type: 'bar',
             data: [5,
             {
-              value: 50,
-              itemStyle: {
-                color: '#a90000'
-              }
+
             },
             6, 10, 10, 20]
           }

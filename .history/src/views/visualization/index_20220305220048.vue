@@ -53,21 +53,14 @@ export default {
         },
         tooltip: {},
         xAxis: {
-          data: ['才智', '沙雕', '智商', '财富', '运气', '小（**）']
+          data: ['才知', '沙雕', '智商', '财富', '运气', '小可爱']
         },
         yAxis: {},
         series: [
           {
-            name: '沙雕',
+            name: '销量',
             type: 'bar',
-            data: [5,
-            {
-              value: 50,
-              itemStyle: {
-                color: '#a90000'
-              }
-            },
-            6, 10, 10, 20]
+            data: [5, 59, 6, 10, 10, 20]
           }
         ]
       });

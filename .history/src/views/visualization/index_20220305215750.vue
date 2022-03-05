@@ -1,5 +1,6 @@
 <template>
-  <div id="main" class="echarts"></div>
+  <div>
+  </div>
 </template>
 
 
@@ -22,7 +23,28 @@ export default {
   // 侦听器
   watch: {},
   // 组件方法
-  methods: {},
+  methods: {
+     // 基于准备好的dom，初始化echarts实例
+      var myChart = echarts.init(document.getElementById('main'));
+      // 绘制图表
+      myChart.setOption({
+        title: {
+          text: '柱状图 示例'
+        },
+        tooltip: {},
+        xAxis: {
+          data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+        },
+        yAxis: {},
+        series: [
+          {
+            name: '销量',
+            type: 'bar',
+            data: [5, 20, 36, 10, 10, 20]
+          }
+        ]
+      });
+  },
   // 以下是生命周期钩子   注：没用到的钩子请自行删除
   /**
   * 在实例初始化之后，组件属性计算之前，如data属性等
@@ -44,33 +66,6 @@ export default {
   * 如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$ el 也在文档内。
   */
   mounted () {
-     // 基于准备好的dom，初始化echarts实例
-      var myChart = echarts.init(document.getElementById('main'));
-      // 绘制图表
-      myChart.setOption({
-        title: {
-          text: '阿修指数'
-        },
-        tooltip: {},
-        xAxis: {
-          data: ['才智', '沙雕', '智商', '财富', '运气', '小（**）']
-        },
-        yAxis: {},
-        series: [
-          {
-            name: '沙雕',
-            type: 'bar',
-            data: [5,
-            {
-              value: 50,
-              itemStyle: {
-                color: '#a90000'
-              }
-            },
-            6, 10, 10, 20]
-          }
-        ]
-      });
   },
   /**
   * 数据更新时调用，发生在虚拟 DOM 重新渲染和打补丁之前。

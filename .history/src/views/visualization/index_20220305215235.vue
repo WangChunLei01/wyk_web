@@ -1,11 +1,9 @@
 <template>
-  <div id="main" class="echarts"></div>
+  <div>
+  </div>
 </template>
 
-
 <script>
-import * as echarts from 'echarts';
-
 export default {
   // 组件名称
   name: 'visualization',
@@ -44,33 +42,6 @@ export default {
   * 如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$ el 也在文档内。
   */
   mounted () {
-     // 基于准备好的dom，初始化echarts实例
-      var myChart = echarts.init(document.getElementById('main'));
-      // 绘制图表
-      myChart.setOption({
-        title: {
-          text: '阿修指数'
-        },
-        tooltip: {},
-        xAxis: {
-          data: ['才智', '沙雕', '智商', '财富', '运气', '小（**）']
-        },
-        yAxis: {},
-        series: [
-          {
-            name: '沙雕',
-            type: 'bar',
-            data: [5,
-            {
-              value: 50,
-              itemStyle: {
-                color: '#a90000'
-              }
-            },
-            6, 10, 10, 20]
-          }
-        ]
-      });
   },
   /**
   * 数据更新时调用，发生在虚拟 DOM 重新渲染和打补丁之前。
