@@ -6,18 +6,20 @@
 </template>
 
 <script>
-import Header from "./views/header";
+import Header from './views/header'
 export default {
-  name: "App",
-  components: { Header },
-};
+  name: 'App',
+  components: {Header},
+
+
+}
 </script>
 
-<style scoped>
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
+  text-align: center;
 }
 </style>

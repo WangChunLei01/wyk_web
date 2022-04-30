@@ -24,7 +24,7 @@
         </el-submenu>
       </el-submenu>
       <el-submenu index="3">
-          <template slot="title">Demo collection</template>
+          <template slot="title"></template>
           <el-menu-item index="/todolist">TodoList</el-menu-item>
           <el-menu-item index="3-2">待开发</el-menu-item>
           <el-menu-item index="3-3">待开发</el-menu-item>

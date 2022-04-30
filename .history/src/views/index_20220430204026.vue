@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <demo-echarts></demo-echarts> -->
+    <demo-echarts></demo-echarts>
     <div class="neon-link">
       <router-link :underline="false" :to="{name:'meteorShower'}" class="btn bc-meteor">Bright Meteor</router-link>
       <el-link :underline="false" class="btn bc-time">Time Flies</el-link>
@@ -10,14 +10,14 @@
 </template>
 
 <script>
-// import  DemoEcharts from "@/components/echarts"
+import  DemoEcharts from "@/components/echarts"
 
 import "animate.css";
 
 export default {
 
   name: "app",
-  // components: {DemoEcharts},
+  components: {DemoEcharts},
   data() {
     return {};
   },

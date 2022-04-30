@@ -29,11 +29,6 @@ const router = new VueRouter({
             name: "visualization",
             component:()=> import('@/views/visualization'),
         },
-        {
-            path:'/todolist',
-            name:'todolist',
-            component:()=>import('@/views/todo-list'),
-        },
         // 重定向
         {
             path: '/',
